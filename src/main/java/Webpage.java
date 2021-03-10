@@ -1,6 +1,6 @@
 package main.java;
 
-public class Webpage {
+public abstract class Webpage {
 
     public void createPage(){
         //Lage et tomt HTML dokument

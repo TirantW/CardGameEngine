@@ -1,4 +1,9 @@
 package main.java;
 
-public class Search {
+public class Search extends Webpage {
+
+    public void addSearchField(){
+
+    }
+
 }

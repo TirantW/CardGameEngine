@@ -1,4 +1,6 @@
 package main.java;
 
-public class Shop {
+public class Shop extends Webpage {
+
+
 }

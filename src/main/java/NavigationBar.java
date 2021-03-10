@@ -1,6 +1,6 @@
 package main.java;
 
-public class NavigationBar {
+public class NavigationBar extends Webpage{
 
     public void addNavigationBar(){
         //Lage en navigasjon bar
