@@ -6,26 +6,23 @@ public class Hand {
         //trekker ett kort
     }
 
-    public Cards show(int n, Cards cards) {
+    public Cards showHand(int n, Cards cards) {
         //vil vise kortet
-        return new Cards();
     }
 
-    public Cards deal(Cards cards) {
+    public Cards dealCard(Cards cards) {
         //vil vise kortet, for så å slette fra hånden
-        return new Cards();
     }
 
-    public void pass() {
+    public void passRound() {
         //passer sin runde
     }
 
     public boolean isEmpty() {
         //sjekker om hånden er tom
-        return true;
     }
 
-    public void pullIn(Cards cards){
+    public void pullInCards(Cards cards){
         //trekker inn kort
     }
 }

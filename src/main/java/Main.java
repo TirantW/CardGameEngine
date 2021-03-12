@@ -12,26 +12,26 @@ public class Main {
         Hand handA = new Hand ();
         Hand handB = new Hand ();
         for (int i = 0; i < NCARDS; i++) {
-            handA.takeCard(cardDeck.draw());
-            handB.takeCard(cardDeck.draw());
+            handA.takeCard(cardDeck.drawFromDeck());
+            handB.takeCard(cardDeck.drawFromDeck());
         }
 
         for (int i = 0; i < NCARDS; i++) {
-            boolean winner = rules.isHigher (handA.show (1, kort), handB.show(1, kort2));
+            boolean winner = rules.isHigher (handA.showHand(1, kort), handB.showHand(1, kort2));
             if (winner == handA) {
                 System.out.println("Hand A had the highest card.");
-                handA.pullIn(kort);
+                handA.pullInCards(kort);
             }
             else if (winner == handB) {
                 System.out.println("Hand B had the highest card.");
-                handB.pullIn(kort);
+                handB.pullInCards(kort);
             }
 
             if (handA.isEmpty() || handB.isEmpty()){
                 return "Du har tapt";
             }
 
-            boolean war = rules.match(handA.show (1, kort), handB.show(1, kort2));
+            boolean war = rules.doCardsmatch(handA.showHand(1, kort), handB.showHand(1, kort2));
         }
 
     }

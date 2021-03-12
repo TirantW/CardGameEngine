@@ -10,11 +10,11 @@ public class Rules {
         //dette vil sjekke om et kort er lavere enn et annet, til for eksempel Kabal
     }
 
-    public boolean match(Cards kortEn, Cards kortTo){
+    public boolean doCardsmatch(Cards kortEn, Cards kortTo){
         //sjekker om kortene matcher
     }
 
-    public boolean colorMatch(Cards kortEn, Cards kortTo){
+    public boolean doCardsColorMatch(Cards kortEn, Cards kortTo){
         //sjekker om fargene på kortene matcher
     }
 
