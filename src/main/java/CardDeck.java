@@ -23,6 +23,10 @@ public class CardDeck {
         //resorterer kortstokken
     }
 
+    public void cardsRemaningInDeck(){
+
+    }
+
     public Cards drawFromDeck(){
         //vil trekke kort utifra spillregler
         return new Cards();
