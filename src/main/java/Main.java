@@ -34,5 +34,6 @@ public class Main {
             boolean war = rules.doCardsmatch(handA.showHand(1, kort), handB.showHand(1, kort2));
         }
 
+        Rules newRule = new Rules();
     }
 }

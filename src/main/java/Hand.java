@@ -2,7 +2,7 @@ package main.java;
 
 public class Hand {
 
-    public void takeCard(Cards cards) {
+    public Cards takeCard(Cards cards) {
         //trekker ett kort
     }
 
@@ -22,7 +22,7 @@ public class Hand {
         //sjekker om hånden er tom
     }
 
-    public void pullInCards(Cards cards){
+    public Cards pullInCards(Cards cards){
         //trekker inn kort
     }
 }
