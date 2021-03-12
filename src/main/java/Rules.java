@@ -20,7 +20,6 @@ public class Rules {
 
     public Rules addRule(Rules rule){
         //legger til egne regler
-        return new Rules();
     }
 
 }
