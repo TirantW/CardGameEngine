@@ -18,8 +18,8 @@ public class Rules {
         //sjekker om fargene på kortene matcher
     }
 
-    public Rules addRule(Rules rule){
-        //legger til egne regler
+    public static void add(Rules rule){
+        //legger til en regel
     }
 
 }
