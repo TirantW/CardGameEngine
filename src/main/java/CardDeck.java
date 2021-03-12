@@ -12,7 +12,6 @@ public class CardDeck {
 
     public Cards draw(){
         //vil trekke kort utifra spillregler
-        Cards kort = new Cards();
         return new Cards();
     }
 

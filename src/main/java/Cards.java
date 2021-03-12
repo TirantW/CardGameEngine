@@ -1,18 +1,17 @@
 package main.java;
 
 public class Cards {
-    public final static int SPADES = 0;
-    public final static int HEARTS = 1;
-    public final static int DIAMONDS = 2;
-    public final static int CLUBS = 3;
-    public final static int JOKER = 4;
+    public static enum Suit{
+    SPADES, HEARTS, DIAMONDS, CLUBS
+}
+    public static enum Number{
+        ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
+    }
+    public static enum Color{
+        RED, BLACK
+    }
 
-    public final static int ACE = 1;
-    public final static int JACK = 11;
-    public final static int QUEEN = 12;
-    public final static int KING = 13;
-
-    public int value;
-    public String color;
-    public String name;
+    private Suit suit;
+    private Color color;
+    private Number number;
 }
