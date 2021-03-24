@@ -3,9 +3,10 @@ package main.java;
 import java.util.ArrayList;
 
 public class CardDeck {
+    private ArrayList<Cards> cards;
 
     public CardDeck(boolean isFull){
-        ArrayList cards = new ArrayList<Cards>();
+        cards = new ArrayList<>();
         if(isFull){
             for (Cards.Suit suit: Cards.Suit.values()){
                 for (Cards.Number number: Cards.Number.values()){
@@ -31,5 +32,13 @@ public class CardDeck {
         //vil trekke kort utifra spillregler
         return new Cards();
     }
+
+    public String toString(){
+        for (int i = 0; i < cards.size(); i++){
+            System.out.println(cards.get(i));
+        }
+        return "";
+    }
+
 
 }
