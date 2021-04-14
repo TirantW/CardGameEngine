@@ -10,5 +10,9 @@ public class Main {
         cardDeck.shuffleDeck();
         System.out.println(cardDeck.toString());
 
+        Hand hand = new Hand();
+        hand.drawCard(cardDeck);
+        System.out.println(hand);
+
     }
 }

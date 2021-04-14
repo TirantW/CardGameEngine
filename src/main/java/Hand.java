@@ -1,20 +1,24 @@
 package main.java;
 
+import java.util.ArrayList;
+
 public class Hand {
 
-    public Cards takeCard(Cards cards) {
+    ArrayList<Cards> cards = new ArrayList<>();
+    Hand hand = new Hand();
+
+    public void takeCard(Cards card) {
         //trekker ett kort
-        return new Cards();
+        cards.add(card);
     }
 
-    public Cards showHand(int n, Cards cards) {
-        //vil vise kortet
-        return new Cards();
+    public void drawCard(CardDeck deck){
+        hand.drawCard(deck);
     }
 
-    public Cards dealCard(Cards cards) {
-        //vil vise kortet, for så å slette fra hånden
-        return new Cards();
+
+    public final ArrayList<Cards> getCards(){
+        return cards;
     }
 
     public void passRound() {
@@ -22,12 +26,19 @@ public class Hand {
     }
 
     public boolean isEmpty() {
-        //sjekker om hånden er tom
-        return true;
+        if (isEmpty()) {
+            return true;
+        }
+        return false;
     }
 
     public Cards pullInCards(Cards cards){
         //trekker inn kort
         return new Cards();
+    }
+
+    @Override
+    public String toString() {
+        return "" + cards.toString();
     }
 }

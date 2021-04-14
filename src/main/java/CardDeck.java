@@ -16,20 +16,35 @@ public class CardDeck {
     }
 
     public void resetDeck() {
-        //sletter gamle kort objekter og resetter dekket til 52 kort.
+
     }
 
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
 
-    public void cardsRemaningInDeck() {
-
+    public int cardsRemaningInDeck() {
+        return cards.size();
     }
 
-    public Cards drawFromDeck() {
-        //vil trekke kort utifra spillregler
-        return new Cards();
+    private void putCard(Cards newCard){
+        if(newCard != null){
+            cards.add(newCard);
+        }
+    }
+
+    private Cards removeCard(int i){
+        if(cards.size() > 0){
+            Cards temp = cards.get(i);
+            cards.remove(i);
+            return temp;
+        }
+
+        return null;
+    }
+
+    public void drawCard(CardDeck from){
+        this.putCard(from.removeCard(0));
     }
 
     public String toString() {
