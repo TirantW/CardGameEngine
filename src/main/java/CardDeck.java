@@ -18,10 +18,12 @@ public class CardDeck {
     public void resetDeck() {
 
     }
-
+    
+   
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
+  
 
     public int cardsRemaningInDeck() {
         return cards.size();
