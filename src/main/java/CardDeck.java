@@ -19,18 +19,11 @@ public class CardDeck {
         //sletter gamle kort objekter og resetter dekket til 52 kort.
     }
     
-     //Endret av Harani (er ikke sikker om det fungerer...)
-    public void shuffleDeck(int n) {
-        int i;
-        int k;
-        int j; 
-        for (k = 0; k < n; k++){
-            i = (int) (cards * Math.random());
-            j = (int) (cards * Math.random());
-        }
+   
+    public void shuffleDeck() {
         Collections.shuffle(cards);
     }
-    //....
+  
 
     public void cardsRemaningInDeck() {
 
