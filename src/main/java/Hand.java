@@ -10,10 +10,12 @@ public class Hand {
     public void takeCard(Cards card) {
         //trekker ett kort
         cards.add(card);
+        System.out.println(takeCard);
     }
 
     public void drawCard(CardDeck deck){
         hand.drawCard(deck);
+        System.out.println(drawCard);
     }
 
 
