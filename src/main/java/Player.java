@@ -8,6 +8,7 @@ public class Player {
     public static BufferedReader buffReader = new BufferedReader(new InputStreamReader(System.in));
     //private String names;
     //private CardDeck hand;
+    
 
     public int inputNumPlayers(){
         int numPlayers = 0;
