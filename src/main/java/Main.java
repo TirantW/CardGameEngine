@@ -10,9 +10,13 @@ public class Main {
         cardDeck.shuffleDeck();
         System.out.println(cardDeck.toString());
 
-        Hand hand = new Hand();
-        hand.drawCard(cardDeck);
-        System.out.println(hand);
 
+        Player maiken = new Player(3, "hei");
+        Player knut = new Player(3, "hei");
+
+        for(int i = 0; i <  5; i++) {
+            maiken.drawCard(cardDeck.drawCard(cardDeck));
+        }
+        System.out.println(cardDeck.cardsRemaningInDeck());
     }
 }

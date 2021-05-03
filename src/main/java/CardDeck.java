@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class CardDeck {
-    private ArrayList<Cards> cards;
+    private ArrayList<Card> cards;
 
     public CardDeck() {
         cards = new ArrayList<>();
-        for (Cards.Suit suit : Cards.Suit.values()) {
-            for (Cards.Number number : Cards.Number.values()) {
-                cards.add(new Cards(suit, number));
+        for (Card.Suit suit : Card.Suit.values()) {
+            for (Card.Number number : Card.Number.values()) {
+                cards.add(new Card(suit, number));
             }
         }
     }
@@ -18,26 +18,26 @@ public class CardDeck {
     public void resetDeck() {
 
     }
-    
-   
+
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
-  
+
 
     public int cardsRemaningInDeck() {
         return cards.size();
     }
 
-    private void putCard(Cards newCard){
-        if(newCard != null){
+    //trekker et kort
+    public void takeCard(Card newCard) {
+        if (newCard != null) {
             cards.add(newCard);
         }
     }
 
-    private Cards removeCard(int i){
-        if(cards.size() > 0){
-            Cards temp = cards.get(i);
+    public Card removeCard(int i) {
+        if (cards.size() > 0) {
+            Card temp = cards.get(i);
             cards.remove(i);
             return temp;
         }
@@ -45,8 +45,19 @@ public class CardDeck {
         return null;
     }
 
-    public void drawCard(CardDeck from){
-        this.putCard(from.removeCard(0));
+
+    public boolean isEmpty() {
+        return isEmpty();
+    }
+
+
+    public CardDeck drawCard(CardDeck deck) {
+        takeCard(deck.removeCard(0));
+        return deck;
+    }
+
+    public void pullInCardsOnTable(Card cards) {
+        //trekker inn kort
     }
 
     public String toString() {
@@ -55,6 +66,5 @@ public class CardDeck {
         }
         return "";
     }
-
 
 }

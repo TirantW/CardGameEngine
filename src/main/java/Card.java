@@ -1,8 +1,8 @@
 package main.java;
 
-public class Cards {
-    public Cards() {
+public class Card {
 
+    public Card() {
     }
 
     public enum Suit{
@@ -19,7 +19,7 @@ public class Cards {
     private Color color;
     private Number number;
 
-    public Cards(Suit s, Number n){
+    public Card(Suit s, Number n){
         suit = s;
         number = n;
         switch(s){
