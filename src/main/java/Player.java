@@ -4,24 +4,24 @@ import java.util.ArrayList;
 
 public class Player {
 
-    int players;
-    String names;
+    String name;
     ArrayList<Card> cards = new ArrayList<>();
     CardDeck cardDeck = new CardDeck();
 
-    public Player(int players, String names){
-        this.players = players;
-        this.names = names;
-    }
+    public Player(String name){
+        this.name = name;
 
-    public void takeCard(Card card) {
-        //trekker ett kort
-        cards.add(card);
     }
 
     public CardDeck drawCard(CardDeck deck){
-        deck.drawCard(cardDeck);
+        takeCard(cardDeck.removeCard(0));
         return deck;
+    }
+
+    private void takeCard(Card newCard) {
+        if (newCard != null) {
+            cards.add(newCard);
+        }
     }
 
 

@@ -38,6 +38,18 @@ public class Card {
         }
     }
 
+    public Color getColor(){
+        return color;
+    }
+
+    public Suit getSuit(){
+        return suit;
+    }
+
+    public Number getNumber(){
+        return number;
+    }
+
     public String toString(){
         return number + " of " + suit + " (" + color + ")";
     }
