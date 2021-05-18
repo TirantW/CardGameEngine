@@ -5,32 +5,26 @@ import java.util.ArrayList;
 public class Player {
 
     String name;
-    ArrayList<Card> cards = new ArrayList<>();
+    ArrayList<Card> kort;
     CardDeck cardDeck = new CardDeck();
 
     public Player(String name){
+        kort = new ArrayList<>();
         this.name = name;
 
     }
 
-    public CardDeck drawCard(CardDeck deck){
-        takeCard(cardDeck.removeCard(0));
-        return deck;
-    }
-
-    private void takeCard(Card newCard) {
-        if (newCard != null) {
-            cards.add(newCard);
-        }
+    public void drawCard(CardDeck deck){
+        cardDeck.drawCard(deck);
     }
 
 
     public final ArrayList<Card> getCards(){
-        return cards;
+        return kort;
     }
 
     @Override
     public String toString() {
-        return "" + cards.toString();
+        return "" + kort.toString();
     }
 }
