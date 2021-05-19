@@ -14,9 +14,9 @@ To begin with:
 
 1. Initializing a Card object.
 
-2. Add some rules from class `Rules` in to the class `Game`, that will fit with your card game. 
+2. Add some rules from class `Rules` into the class `Game`, that will fit with your card game. 
 
-3. 
+3. Add methods from class `Player`, so the player can draw, get the cards. 
 
 4.
 
