@@ -10,6 +10,12 @@ These are rules that most of the card games uses.
 
 In `Player.java` can you get method like `drawCard`, `getCards`, `getCardDeck`. These are the method that every player in a card game uses to play. Most of the card games needs these methods to play. 
 
+
+Manually adding Card game:
+
+1. Download `FrameWork.jar` file to your machine from [this link](https://github.com/TirantW/CardGameEngine/blob/main/out/artifacts/FrameWork_jar2/FrameWork.jar).
+
+
 To begin with: 
 
 1. Initializing a Card object.
