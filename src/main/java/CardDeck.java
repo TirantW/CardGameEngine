@@ -67,6 +67,14 @@ public class CardDeck {
         //trekker inn kort
     }
 
+    public ArrayList<Card> getCards() {
+        return cards;
+    }
+
+    public void setCards(ArrayList<Card> cards) {
+        this.cards = cards;
+    }
+
     public String toString() {
         return "" + cards.toString();
     }

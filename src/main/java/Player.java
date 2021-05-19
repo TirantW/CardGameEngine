@@ -14,6 +14,10 @@ public class Player {
 
     }
 
+    /**
+     *
+     * @param deck
+     */
     public void drawCard(CardDeck deck){
         cardDeck.drawCard(deck);
     }
@@ -21,6 +25,14 @@ public class Player {
 
     public final ArrayList<Card> getCards(){
         return kort;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public CardDeck getCardDeck() {
+        return cardDeck;
     }
 
     @Override
