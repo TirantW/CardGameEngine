@@ -10,6 +10,11 @@ These are rules that most of the card games uses.
 
 In Player.java can you get method like drawCard, getCards, getCardDeck. These are the method that every player in a card game uses to play. Most of the card games needs these methods to play. 
 
+To begin with: 
+
+1. Initializing a Card object.
+
+2. Add som rules from class Rules.
 
 
 
