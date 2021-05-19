@@ -32,6 +32,14 @@ public class Rules {
         return false;
     }
 
+    public boolean doCardsNumberMatch(Card kortEn, Card kortTo){
+        //sjekker om fargene på kortene matcher
+        if (kortEn.getNumber().equals(kortTo.getNumber())){
+            return true;
+        }
+        return false;
+    }
+
     public static void add(Rules rule){
         //legger til en regel
     }

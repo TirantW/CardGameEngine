@@ -27,12 +27,24 @@ public class Player {
         return kort;
     }
 
+    public Card getCard(int i){
+        return kort.get(i);
+    }
+
     public String getName() {
         return name;
     }
 
     public CardDeck getCardDeck() {
         return cardDeck;
+    }
+
+    public void pullInCardsOnTable(Card cards) {
+        //trekker inn kort
+    }
+
+    public boolean isEmpty() {
+        return isEmpty();
     }
 
     @Override
