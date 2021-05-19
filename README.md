@@ -16,7 +16,7 @@ To begin with:
 
 2. Add some rules from class `Rules` into the class `Game`, that will fit with your card game. 
 
-3. Add methods from class `Player`, so the player can draw, get the cards. 
+3. Add methods from class `Player` into the class `Game`, so the player can draw, get the cards. 
 
 4.
 
