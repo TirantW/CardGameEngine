@@ -14,8 +14,11 @@ To begin with:
 
 1. Initializing a Card object.
 
-2. Add som rules from class Rules.
+2. Add some rules from class Rules.
 
+3.
+
+4.
 
 
 
