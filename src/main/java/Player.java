@@ -9,9 +9,7 @@ public class Player {
     CardDeck cardDeck = new CardDeck();
 
     public Player(String name){
-        kort = new ArrayList<>();
         this.name = name;
-
     }
 
     /**
@@ -27,10 +25,10 @@ public class Player {
     }*/
 
     /**
-     * lays/displays out a card
+     * lays out a card
      */
-    public void layOutCard(){
-
+    public void layOutCard(CardDeck deck){
+        deck.drawCard(cardDeck);
     }
 
     /**
@@ -40,6 +38,7 @@ public class Player {
     public void pullInCardsOnTable(Card cards) {
         //trekker inn kort
     }
+
 
     /**
      * checks if hand is empty
@@ -73,6 +72,10 @@ public class Player {
      */
     public String getName() {
         return name;
+    }
+
+    public CardDeck getCardDeck(){
+        return cardDeck;
     }
 
     @Override

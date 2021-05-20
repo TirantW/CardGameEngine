@@ -7,7 +7,10 @@ public class Main {
     public static void main(String[] args) {
 
         CardDeck cardDeck = new CardDeck();
-        System.out.println(cardDeck.toString());
+        CardDeck tableDeck = new CardDeck();
+        tableDeck.removeAllCards();
+
+
 
         Player maiken = new Player("hei");
         Player thomas = new Player("yo");
@@ -17,13 +20,18 @@ public class Main {
         players.add(maiken);
         players.add(thomas);
 
-        for(int i = 0; i < 26; i++){
+
+
+        //maiken.layOutCard(tableDeck);
+
             maiken.drawCard(cardDeck);
-            thomas.drawCard(cardDeck);
-        }
+
+
 
         System.out.println(cardDeck.cardsRemainingInDeck());
-        System.out.println(maiken.getCards().size());
+        System.out.println(tableDeck.cardsRemainingInDeck());
+        System.out.println(maiken.getCardDeck().cardsRemainingInDeck());
+
 
 
     }

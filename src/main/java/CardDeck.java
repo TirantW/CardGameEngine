@@ -7,7 +7,7 @@ public class CardDeck {
     private ArrayList<Card> cards;
 
     public CardDeck() {
-        cards = new ArrayList<>();
+        cards = new ArrayList<Card>();
         for (Card.Suit suit : Card.Suit.values()) {
             for (Card.Number number : Card.Number.values()) {
                 cards.add(new Card(suit, number));
@@ -34,28 +34,35 @@ public class CardDeck {
      * @param newCard
      */
     public void takeCard(Card newCard) {
-        if (newCard != null) {
             cards.add(newCard);
-        }
     }
 
     /**
-     * removes top card from deck
-     * @param i
+     * removes card from index i on deck
+     * @param pos
      * @return
      */
-    public Card removeCard(int i) {
+    public Card removeCard(int pos) {
         if (cards.size() > 0) {
-            Card temp = cards.get(i);
-            cards.remove(i);
-            return temp;
+            Card tmp = cards.get(pos);
+            cards.remove(pos);
+            return tmp;
         }
 
         return null;
     }
 
     /**
-     * recieves card from deck
+     * removes all cards
+     * @param
+     * @return
+     */
+    public void removeAllCards(){
+        cards.removeAll(cards);
+    }
+
+    /**
+     * Recieves top card to this deck from another deck
      * @param from
      */
     public void drawCard(CardDeck from){
@@ -94,13 +101,16 @@ public class CardDeck {
         return isEmpty();
     }
 
-    public ArrayList<Card> split(){
+    public ArrayList<Card> split(int numPlayers){
         ArrayList<Card> tmp = new ArrayList<>();
-        if(cards.size() % 2 == 0){
-        for (int i = 0; i < (cards.size()/2); i++) {
+        if(cards.size() % numPlayers == 0){
+            for (int i = 0; i < (cards.size()/numPlayers); i++) {
                 tmp.add(cards.get(i));
                 cards.remove(i);
             }
+        }
+        else{
+            System.out.println("Not an even number");
         }
         return tmp;
     }
