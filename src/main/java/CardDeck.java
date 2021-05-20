@@ -67,6 +67,25 @@ public class CardDeck {
         //trekker inn kort
     }
 
+    public ArrayList<Card> split(){
+        ArrayList<Card> tmp = new ArrayList<>();
+        if(cards.size() % 2 == 0){
+        for (int i = 0; i < (cards.size()/2); i++) {
+                tmp.add(cards.get(i));
+                cards.remove(i);
+            }
+        }
+        return tmp;
+    }
+
+    public void splitty(int numPlayers){
+        if(cards.size() % numPlayers == 0)
+        for (int i = 0; i < (cards.size()/numPlayers); i++) {
+
+        }
+
+    }
+
     public ArrayList<Card> getCards() {
         return cards;
     }

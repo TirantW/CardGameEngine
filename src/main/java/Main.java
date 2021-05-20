@@ -1,5 +1,7 @@
 package main.java;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,12 +13,14 @@ public class Main {
         System.out.println(cardDeck.toString());
 
         Player maiken = new Player("hei");
+        Player thomas = new Player("yo");
 
-        for (int i = 0; i < 5; i++) {
-            maiken.drawCard(cardDeck);
-        }
+        ArrayList<Player> players = new ArrayList<>();
+
+        CardDeck maikenDeck = cardDeck.split();
 
         System.out.println(cardDeck.cardsRemaningInDeck());
         System.out.println(maiken.getCards());
+        System.out.println(thomas.getCards());
     }
 }

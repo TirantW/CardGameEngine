@@ -19,9 +19,9 @@ public class Card {
     private Color color;
     private Number number;
 
-    public Card(Suit s, Number n){
+    public Card(Suit s, Number num){
         suit = s;
-        number = n;
+        number = num;
         switch(s){
             case CLUBS:
                 color = Color.BLACK;
