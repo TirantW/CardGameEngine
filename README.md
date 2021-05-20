@@ -15,6 +15,19 @@ Manually adding Card game:
 
 1. Download `FrameWork.jar` file to your machine from [this link](https://github.com/TirantW/CardGameEngine/blob/main/out/artifacts/FrameWork_jar2/FrameWork.jar).
 
+2. From the project file you downloaded, locate `FrameWork.jar` on your computer.
+
+3. Select the project `FrameWork` in the IntelliJ IDEA application.
+
+4. After that, go to File to Project Structure.
+
+5. Navigate to Dependencies under Modules.
+
+6. Select JARs or Directories from the + symbol below the list of modules.
+
+7. Apply, then OK,`FrameWork`has been installed successfully.
+
+
 
 To begin with: 
 
