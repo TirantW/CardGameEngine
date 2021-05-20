@@ -13,6 +13,7 @@ public class CardDeck {
                 cards.add(new Card(suit, number));
             }
         }
+        shuffleDeck();
     }
 
     /**
@@ -104,12 +105,10 @@ public class CardDeck {
         return tmp;
     }
 
-    public void splitty(int numPlayers){
-        if(cards.size() % numPlayers == 0)
-        for (int i = 0; i < (cards.size()/numPlayers); i++) {
-
+    public void splitty(ArrayList<Player> players, CardDeck deck){
+        for(int i = 0; i < deck.cardsRemainingInDeck(); i++){
+            players.get(i).drawCard(deck);
         }
-
     }
 
     /**

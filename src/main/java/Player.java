@@ -22,6 +22,10 @@ public class Player {
         cardDeck.drawCard(deck);
     }
 
+    /*public void split(CardDeck deck){
+        deck.splitty();
+    }*/
+
     /**
      * lays/displays out a card
      */
