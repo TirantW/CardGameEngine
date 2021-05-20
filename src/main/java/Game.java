@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Game {
     private ArrayList<Player> players;
-    CardDeck tableCards = new CardDeck();
+    Card tableCards = new Card();
     CardDeck cardDeck = new CardDeck();
 
     Rules rules = new Rules();
@@ -13,7 +13,7 @@ public class Game {
 
     }
 
-    public void gameKrig(ArrayList<Player> players){
+    public void gameKrig(ArrayList<Player> players) {
 
         for (int i = 0; i < players.size(); i++) { //Iterating through each player
             Player iteratorPlayer = players.get(i);//Set current player
@@ -25,59 +25,78 @@ public class Game {
             Player currentPlayer;
 
 
-            while(!playerOne.isEmpty() && !playerTwo.isEmpty()){
-                onNewRound(players){
-                    if(rules.isHigher(playerOne.getCard(0), playerTwo.getCard(0))){
-                        playerOne.trekkInn();
-                    }
-                    else if(rules.doCardsNumberMatch(playerOne.getCard(0), playerTwo.getCard(0))){
+            while (!playerOne.isEmpty() && !playerTwo.isEmpty()) {
+                    if (rules.isHigher(playerOne.getCard(0), playerTwo.getCard(0))) {
+                        playerOne.drawCard(cardDeck);
+                    } else if (rules.doCardsNumberMatch(playerOne.getCard(0), playerTwo.getCard(0))) {
                         for (int j = 1; j < 3; j++) {
-                            playerOne.LeggUt();
-                            playerTwo.leggUt();
+                            playerOne.layOutCard();
+                            playerTwo.layOutCard();
                         }
-                        if(rules.isHigher(playerOne.getCard(2), playerTwo.getCard(2))){ //Hvis index2 of tableCards > index 2 tableCards2
+                        if (rules.isHigher(playerOne.getCard(2), playerTwo.getCard(2))) { //Hvis index2 of tableCards > index 2 tableCards2
                             playerOne.pullInCardsOnTable(tableCards);
                         }
 
-                    }
-                    else
-                        playerTwo.trekkInn();
+                    } else
+                        playerTwo.drawCard(cardDeck);
 
                     playerOne.drawCard(cardDeck);
                     playerTwo.drawCard(cardDeck);
-
-                    onNewPlayerRound(currentPlayer);
-                }
             }
-            if(playerOne.isEmpty()){
+            if (playerOne.isEmpty()) {
                 System.out.println("Player: " + playerTwo.getName() + " Won!");
-            }
-            else if(playerTwo.isEmpty())
+            } else if (playerTwo.isEmpty())
                 System.out.println("Player: " + playerOne.getName() + " Won!");
 
         }
     }
 
+    /**
+     * sets rules for each round
+     * @param players
+     */
     public void onNewRound(ArrayList<Player> players) {
+        onNewPlayerRound(players);
+        Player playerOne = players.get(0);
+        Player playerTwo = players.get(1);
 
-        onNewPlayerRound(currentPlayer){
-
+        while (!playerOne.isEmpty() && !playerTwo.isEmpty()) {
+            if (rules.isHigher(playerOne.getCard(0), playerTwo.getCard(0))) {
+                playerOne.drawCard(cardDeck);
+            } else {
+                playerTwo.drawCard(cardDeck);
+            }
+            if (rules.doCardsNumberMatch(playerOne.getCard(0), playerTwo.getCard(0))) {
+                for (int j = 1; j < 3; j++) {
+                    playerOne.layOutCard();
+                    playerTwo.layOutCard();
+                }
+                if (rules.isHigher(playerOne.getCard(2), playerTwo.getCard(2))) { //Hvis index2 of tableCards > index 2 tableCards2
+                    playerOne.pullInCardsOnTable(tableCards);
+                } else {
+                    playerTwo.pullInCardsOnTable(tableCards);
+                }
+            }
+            if (playerOne.isEmpty()) {
+                System.out.println("Player: " + playerTwo.getName() + " Won!");
+            } else if (playerTwo.isEmpty())
+                System.out.println("Player: " + playerOne.getName() + " Won!");
         }
-
     }
 
 
+    /**
+     * sets rules for each player per round
+     * @param players
+     */
+    public void onNewPlayerRound(ArrayList<Player> players) {
 
-    public void onNewPlayerRound(Player currentPlayer) {
-        currentPlayer.getCards().
-        //Remove top card from each
-        //hvis kort1 er høyere en kort2, kort1 trekker inn // if kort1>kort2 then player1.drawCard(0) drawCard(1)
-        //hvis kortene matcher, krig //legg ut tre kort hver // if kort1 == kort2 then war() war(){ give 3 card to each player
-        //
-
+        for (int i = 0; i < players.size(); i++) {
+            players.get(i).layOutCard();
+        }
     }
 
-    public void Play(){
+    public void Play() {
 
     }
 }

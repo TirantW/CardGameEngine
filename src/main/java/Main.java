@@ -17,9 +17,9 @@ public class Main {
 
         ArrayList<Player> players = new ArrayList<>();
 
-        CardDeck maikenDeck = cardDeck.split();
+        //CardDeck maikenDeck = cardDeck.split();
 
-        System.out.println(cardDeck.cardsRemaningInDeck());
+        System.out.println(cardDeck.cardsRemainingInDeck());
         System.out.println(maiken.getCards());
         System.out.println(thomas.getCards());
     }

@@ -38,14 +38,26 @@ public class Card {
         }
     }
 
+    /**
+     * returns color
+     * @return
+     */
     public Color getColor(){
         return color;
     }
 
+    /**
+     * returns suit
+     * @return
+     */
     public Suit getSuit(){
         return suit;
     }
 
+    /**
+     * returns number
+     * @return
+     */
     public Number getNumber(){
         return number;
     }

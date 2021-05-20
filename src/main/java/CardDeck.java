@@ -15,6 +15,9 @@ public class CardDeck {
         }
     }
 
+    /**
+     * deletes all current card object and create a new deck
+     */
     public void resetDeck() {
         cards = new ArrayList<>();
         for (Card.Suit suit : Card.Suit.values()) {
@@ -25,12 +28,21 @@ public class CardDeck {
         shuffleDeck();
     }
 
+    /**
+     * adds a card to hand
+     * @param newCard
+     */
     public void takeCard(Card newCard) {
         if (newCard != null) {
             cards.add(newCard);
         }
     }
 
+    /**
+     * removes top card from deck
+     * @param i
+     * @return
+     */
     public Card removeCard(int i) {
         if (cards.size() > 0) {
             Card temp = cards.get(i);
@@ -41,30 +53,44 @@ public class CardDeck {
         return null;
     }
 
+    /**
+     * recieves card from deck
+     * @param from
+     */
     public void drawCard(CardDeck from){
         this.takeCard(from.removeCard(0));
     }
 
+    /**
+     * gives a card from deck to another deck or player
+     * @param to
+     * @param i
+     */
     public void giveCard(CardDeck to, int i){
         to.takeCard(this.removeCard(i));
     }
 
+    /**
+     * shuffles deck
+     */
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
 
-
-    public int cardsRemaningInDeck() {
+    /**
+     * returns cards remaining in deck
+     * @return
+     */
+    public int cardsRemainingInDeck() {
         return cards.size();
     }
 
-
+    /**
+     * checks if deck is empty
+     * @return
+     */
     public boolean isEmpty() {
         return isEmpty();
-    }
-
-    public void pullInCardsOnTable(Card cards) {
-        //trekker inn kort
     }
 
     public ArrayList<Card> split(){
@@ -86,12 +112,12 @@ public class CardDeck {
 
     }
 
+    /**
+     * returns cards in deck
+     * @return
+     */
     public ArrayList<Card> getCards() {
         return cards;
-    }
-
-    public void setCards(ArrayList<Card> cards) {
-        this.cards = cards;
     }
 
     public String toString() {
