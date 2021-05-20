@@ -29,9 +29,11 @@ Manually adding Card game:
 
 
 
+
+
 To begin with: 
 
-1. Initializing a Card object.
+1. Initializing `CardDeck`.
 
 2. Add some rules from class `Rules` into the class `Game`, that will fit with your card game. 
 
