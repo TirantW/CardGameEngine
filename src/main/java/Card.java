@@ -7,12 +7,12 @@ public class Card {
 
     public enum Suit{
     SPADES, HEARTS, DIAMONDS, CLUBS
-}
-    public enum Number{
-        ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
     }
     public enum Color{
         RED, BLACK
+    }
+    public enum Number{
+        ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
     }
 
     private Suit suit;
