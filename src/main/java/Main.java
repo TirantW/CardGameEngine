@@ -30,7 +30,6 @@ public class Main {
 
         System.out.println(cardDeck.cardsRemainingInDeck());
         System.out.println(tableDeck.cardsRemainingInDeck());
-        System.out.println(maiken.getCardDeck().cardsRemainingInDeck());
 
 
 

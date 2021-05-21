@@ -6,6 +6,9 @@ import java.util.Collections;
 public class CardDeck {
     private ArrayList<Card> cards;
 
+    /**
+     * constructor
+     */
     public CardDeck() {
         cards = new ArrayList<Card>();
         for (Card.Suit suit : Card.Suit.values()) {
@@ -33,7 +36,7 @@ public class CardDeck {
      * adds a card to hand
      * @param newCard
      */
-    public void takeCard(Card newCard) {
+    protected void takeCard(Card newCard) {
             cards.add(newCard);
     }
 
@@ -42,7 +45,7 @@ public class CardDeck {
      * @param pos
      * @return
      */
-    public Card removeCard(int pos) {
+    protected Card removeCard(int pos) {
         if (cards.size() > 0) {
             Card tmp = cards.get(pos);
             cards.remove(pos);
@@ -53,20 +56,21 @@ public class CardDeck {
     }
 
     /**
+     * Recieves top card to this deck from another deck
+     * @param deck
+     */
+    protected void drawCard(CardDeck deck){
+        this.takeCard(deck.removeCard(0));
+    }
+
+
+    /**
      * removes all cards
      * @param
      * @return
      */
     public void removeAllCards(){
         cards.removeAll(cards);
-    }
-
-    /**
-     * Recieves top card to this deck from another deck
-     * @param from
-     */
-    public void drawCard(CardDeck from){
-        this.takeCard(from.removeCard(0));
     }
 
     /**
@@ -86,8 +90,8 @@ public class CardDeck {
     }
 
     /**
-     * returns cards remaining in deck
-     * @return
+     *
+     * @return cards remaining in deck
      */
     public int cardsRemainingInDeck() {
         return cards.size();
@@ -95,7 +99,7 @@ public class CardDeck {
 
     /**
      * checks if deck is empty
-     * @return
+     * @return true or false
      */
     public boolean isEmpty() {
         return isEmpty();
@@ -122,13 +126,17 @@ public class CardDeck {
     }
 
     /**
-     * returns cards in deck
-     * @return
+     *
+     * @return cards in deck
      */
     public ArrayList<Card> getCards() {
         return cards;
     }
 
+    /**
+     *
+     * @return card objects to string
+     */
     public String toString() {
         return "" + cards.toString();
     }

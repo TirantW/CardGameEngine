@@ -2,66 +2,78 @@ package main.java;
 
 public class Card {
 
+    /**
+     * empty constructor
+     */
     public Card() {
     }
 
     public enum Suit{
-    SPADES, HEARTS, DIAMONDS, CLUBS
+    Spades, Hearts, Diamonds, Clubs
     }
     public enum Color{
-        RED, BLACK
+        Red, Black
     }
     public enum Number{
-        ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
+        Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King
     }
 
     private Suit suit;
     private Color color;
     private Number number;
 
+    /**
+     * constructor giving each card a value
+     * @param s
+     * @param num
+     */
     public Card(Suit s, Number num){
         suit = s;
         number = num;
         switch(s){
-            case CLUBS:
-                color = Color.BLACK;
+            case Diamonds:
+                color = Color.Red;
                 break;
-            case SPADES:
-                color = Color.BLACK;
+            case Clubs:
+                color = Color.Black;
                 break;
-            case HEARTS:
-                color = Color.RED;
+            case Spades:
+                color = Color.Black;
                 break;
-            case DIAMONDS:
-                color = Color.RED;
+            case Hearts:
+                color = Color.Red;
                 break;
         }
     }
 
     /**
-     * returns color
-     * @return
+     *
+     * @return color
      */
     public Color getColor(){
         return color;
     }
 
     /**
-     * returns suit
-     * @return
+     *
+     * @return suit
      */
     public Suit getSuit(){
         return suit;
     }
 
     /**
-     * returns number
-     * @return
+     *
+     * @return number
      */
     public Number getNumber(){
         return number;
     }
 
+    /**
+     *
+     * @return number, color and suit of card as string
+     */
     public String toString(){
         return number + " of " + suit + " (" + color + ")";
     }

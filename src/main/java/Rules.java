@@ -10,7 +10,7 @@ public class Rules {
      * check if one card is higher than another
      * @param kortEn
      * @param kortTo
-     * @return
+     * @return true or false
      */
     public boolean isHigher(Card kortEn, Card kortTo){
         //dette vil sjekke om et kort er høyere enn et annet, til for eksempel Krig
@@ -21,7 +21,7 @@ public class Rules {
      * check if one card is lower than another
      * @param kortEn
      * @param kortTo
-     * @return
+     * @return true or false
      */
     public boolean isLower(Card kortEn, Card kortTo){
         //dette vil sjekke om et kort er lavere enn et annet, til for eksempel Kabal
@@ -32,7 +32,7 @@ public class Rules {
      * checks if two cards match
      * @param kortEn
      * @param kortTo
-     * @return
+     * @return true or false
      */
     public boolean doCardsmatch(Card kortEn, Card kortTo){
         //sjekker om kortene matcher
@@ -46,7 +46,7 @@ public class Rules {
      * checks if two cards' color match
      * @param kortEn
      * @param kortTo
-     * @return
+     * @return true or false
      */
     public boolean doCardsColorMatch(Card kortEn, Card kortTo){
         //sjekker om fargene på kortene matcher
@@ -60,7 +60,7 @@ public class Rules {
      * checks if two cards' number match
      * @param kortEn
      * @param kortTo
-     * @return
+     * @return true or false
      */
     public boolean doCardsNumberMatch(Card kortEn, Card kortTo){
         //sjekker om fargene på kortene matcher

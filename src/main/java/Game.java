@@ -3,14 +3,14 @@ package main.java;
 import java.util.ArrayList;
 
 public class Game {
-  /*  private ArrayList<Player> players;
+    private ArrayList<Player> players;
     Card tableCards = new Card();
     CardDeck cardDeck = new CardDeck();
 
     Rules rules = new Rules();
 
     public Game(ArrayList<Player> players) {
-
+        players = new ArrayList<>();
     }
 
     public void gameKrig(ArrayList<Player> players) {
@@ -55,7 +55,7 @@ public class Game {
      * sets rules for each round
      * @param players
      */
-   /* public void onNewRound(ArrayList<Player> players) {
+    public void onNewRound(ArrayList<Player> players) {
         onNewPlayerRound(players);
         Player playerOne = players.get(0);
         Player playerTwo = players.get(1);
@@ -89,7 +89,7 @@ public class Game {
      * sets rules for each player per round
      * @param players
      */
-  /*  public void onNewPlayerRound(ArrayList<Player> players) {
+    public void onNewPlayerRound(ArrayList<Player> players) {
 
         for (int i = 0; i < players.size(); i++) {
             players.get(i).layOutCard();
@@ -98,5 +98,5 @@ public class Game {
 
     public void Play() {
 
-    } */
+    }
 }

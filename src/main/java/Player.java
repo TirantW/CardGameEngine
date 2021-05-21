@@ -8,7 +8,12 @@ public class Player {
     ArrayList<Card> kort;
     CardDeck cardDeck = new CardDeck();
 
+    /**
+     * contructor
+     * @param name
+     */
     public Player(String name){
+        kort = new ArrayList<>();
         this.name = name;
     }
 
@@ -20,19 +25,20 @@ public class Player {
         cardDeck.drawCard(deck);
     }
 
-    /*public void split(CardDeck deck){
-        deck.splitty();
-    }*/
-
     /**
      * lays out a card
      */
-    public void layOutCard(CardDeck deck){
-        deck.drawCard(cardDeck);
+    public void layOutCard(Card card){
+
     }
 
     /**
      * recieves all displayed cards
+     * @param cards
+     */
+
+    /**
+     * pulls in all displayed cards
      * @param cards
      */
     public void pullInCardsOnTable(Card cards) {
@@ -42,7 +48,7 @@ public class Player {
 
     /**
      * checks if hand is empty
-     * @return
+     * @return true or false
      */
     public boolean isEmpty() {
         return isEmpty();
@@ -50,34 +56,35 @@ public class Player {
 
 
     /**
-     * returns all cards on hand
-     * @return
+     *
+     * @return array of cards
      */
     public final ArrayList<Card> getCards(){
         return kort;
     }
 
     /**
-     * returns one specific card
+     *
      * @param i
-     * @return
+     * @return specific card from array
      */
     public Card getCard(int i){
         return kort.get(i);
     }
 
     /**
-     * returns name
-     * @return
+     *
+     * @return name
      */
     public String getName() {
         return name;
     }
 
-    public CardDeck getCardDeck(){
-        return cardDeck;
-    }
 
+    /**
+     *
+     * @return card object to string
+     */
     @Override
     public String toString() {
         return "" + kort.toString();
