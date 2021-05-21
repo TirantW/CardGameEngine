@@ -38,7 +38,7 @@ Class summary:
 Player
 Method summary:
 void – drawCard(CardDeck deck) : Trekker et kort fra kortstokken.
-void – layOutCard() : Vil legge øvereste kort fra spillers hånd til «bordet».
+void – layOutCard(Card cards) : Vil legge øvereste kort fra spillers hånd til «bordet».
 void – pullInAllCardsOnTable(Card cards) : Vil trekke inn alle kort på «bordet».
 Void – isEmpty() : Sjekker om hånden er tom. 
 ArrayList<Card> – getCards() : returnerer alle kort på hånden.
