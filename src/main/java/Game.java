@@ -30,8 +30,8 @@ public class Game {
                         playerOne.drawCard(cardDeck);
                     } else if (rules.doCardsNumberMatch(playerOne.getCard(0), playerTwo.getCard(0))) {
                         for (int j = 1; j < 3; j++) {
-                            playerOne.layOutCard();
-                            playerTwo.layOutCard();
+                            playerOne.layOutCard(tableCards);
+                            playerTwo.layOutCard(tableCards);
                         }
                         if (rules.isHigher(playerOne.getCard(2), playerTwo.getCard(2))) { //Hvis index2 of tableCards > index 2 tableCards2
                             playerOne.pullInCardsOnTable(tableCards);
