@@ -48,18 +48,18 @@ public class Card {
 
     /**
      *
-     * @return color
-     */
-    public Color getColor(){
-        return color;
-    }
-
-    /**
-     *
      * @return suit
      */
     public Suit getSuit(){
         return suit;
+    }
+
+    /**
+     *
+     * @return color
+     */
+    public Color getColor(){
+        return color;
     }
 
     /**
@@ -75,6 +75,6 @@ public class Card {
      * @return number, color and suit of card as string
      */
     public String toString(){
-        return number + " of " + suit + " (" + color + ")";
+        return "(" + color + ")" + number + " of " + suit;
     }
 }

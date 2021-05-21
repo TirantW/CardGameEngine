@@ -21,7 +21,7 @@ public class Main {
 
         maiken.drawCard(cardDeck);
 
-
+        System.out.println(cardDeck.getCards());
         System.out.println(cardDeck.cardsRemainingInDeck());
 
 

@@ -105,6 +105,10 @@ public class CardDeck {
         return isEmpty();
     }
 
+    /**
+     * Splits deck into amount of players, which has to be even for this method to work.
+     * @return tmp which is the other half of the card deck
+     */
     public ArrayList<Card> split(int numPlayers){
         ArrayList<Card> tmp = new ArrayList<>();
         if(cards.size() % numPlayers == 0){
@@ -117,12 +121,6 @@ public class CardDeck {
             System.out.println("Not an even number");
         }
         return tmp;
-    }
-
-    public void splitty(ArrayList<Player> players, CardDeck deck){
-        for(int i = 0; i < deck.cardsRemainingInDeck(); i++){
-            players.get(i).drawCard(deck);
-        }
     }
 
     /**

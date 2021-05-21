@@ -9,10 +9,19 @@ public class Game {
 
     Rules rules = new Rules();
 
+    /**
+     * contructor
+     * @param players
+     */
     public Game(ArrayList<Player> players) {
         players = new ArrayList<>();
     }
 
+    /**
+     *
+     * @param players
+     * @return sets rules and plays the game krig
+     */
     public void gameKrig(ArrayList<Player> players) {
 
         for (int i = 0; i < players.size(); i++) { //Iterating through each player

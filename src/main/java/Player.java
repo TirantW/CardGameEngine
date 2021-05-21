@@ -18,7 +18,7 @@ public class Player {
     }
 
     /**
-     * recieves a card from deck
+     * recieves a card from deck another deck
      * @param deck
      */
     public void drawCard(CardDeck deck){
@@ -31,11 +31,6 @@ public class Player {
     public void layOutCard(Card card){
 
     }
-
-    /**
-     * recieves all displayed cards
-     * @param cards
-     */
 
     /**
      * pulls in all displayed cards
